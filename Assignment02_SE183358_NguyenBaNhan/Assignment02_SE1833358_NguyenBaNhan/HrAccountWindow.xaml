@@ -1,0 +1,172 @@
+﻿<Window x:Class="CandidateManagement_NguyenBaNhan.HrAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CandidateManagement_NguyenBaNhan"
+        mc:Ignorable="d"
+        Title="HrAccountWindow" Height="878" Width="1485" Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="BackgroundBrush" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FFD2F7EA" Offset="0.9" />
+            <GradientStop Color="#FF4EC1F9" Offset="0.1" />
+        </LinearGradientBrush>
+    </Window.Resources>
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <Label Content=" HR Account Management" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" Height="74" Width="404" 
+               FontSize="32" FontFamily="Yu Gothic UI Semibold" TextBlock.TextAlignment="Center" FontWeight="ExtraBold">
+
+        </Label>
+
+        <Label Content="Email" HorizontalAlignment="Left" Margin="244,115,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" Foreground="Black"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="244,202,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" Foreground="Black"/>
+        <Label Content="FullName" HorizontalAlignment="Left" Margin="774,202,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" Foreground="Black"/>
+        <Label Content="MemberRole" HorizontalAlignment="Left" Margin="774,120,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" Foreground="Black"/>
+
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="369,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" Height="41" FontSize="20" 
+                 Padding="5" BorderBrush="#FFB0BEC5" BorderThickness="1"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="369,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" Height="41" FontSize="20" 
+                 Padding="5" BorderBrush="#FFB0BEC5" BorderThickness="1"/>
+        <TextBox x:Name="txtFullName" HorizontalAlignment="Left" Margin="922,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" Height="41" FontSize="20" 
+                 Padding="5" BorderBrush="#FFB0BEC5" BorderThickness="1"/>
+
+        <Button x:Name="btn_Add" Content="ADD" HorizontalAlignment="Left" Margin="257,739,0,0" VerticalAlignment="Top" Height="55" Width="174" Click="btn_Add_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+               BorderBrush="{TemplateBinding BorderBrush}" 
+               BorderThickness="{TemplateBinding BorderThickness}" 
+               CornerRadius="30">
+
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#7de2fc" Offset="0.0"/>
+                    <GradientStop Color="#FF1E88E5" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Foreground>Black</Button.Foreground>
+            <Button.FontWeight>Bold</Button.FontWeight>
+
+        </Button>
+
+        <Button x:Name="btn_Update" Content="UPDATE" HorizontalAlignment="Left" Margin="511,739,0,0" VerticalAlignment="Top" Height="55" Width="174" Click="btn_Update_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+               BorderBrush="{TemplateBinding BorderBrush}" 
+               BorderThickness="{TemplateBinding BorderThickness}" 
+               CornerRadius="30">
+
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#dfffcd" Offset="0.0"/>
+                    <GradientStop Color="#50cc7f" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Foreground>Black</Button.Foreground>
+            <Button.FontWeight>Bold</Button.FontWeight>
+
+        </Button>
+
+        <Button x:Name="btn_Back" Content="BACK" HorizontalAlignment="Left" Margin="1266,34,0,0" VerticalAlignment="Top" Height="55" Width="174" Click="btn_Back_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+               BorderBrush="{TemplateBinding BorderBrush}" 
+               BorderThickness="{TemplateBinding BorderThickness}" 
+               CornerRadius="30">
+
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#FFFFD7AE" Offset="0.0"/>
+                    <GradientStop Color="#f9d423" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Foreground>Black</Button.Foreground>
+            <Button.FontWeight>Bold</Button.FontWeight>
+
+        </Button>
+
+        <Button x:Name="btn_Delete" Content="DELETE" HorizontalAlignment="Left" Margin="985,739,0,0" VerticalAlignment="Top" Height="55" Width="174" Click="btn_Delete_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+               BorderBrush="{TemplateBinding BorderBrush}" 
+               BorderThickness="{TemplateBinding BorderThickness}" 
+               CornerRadius="30">
+
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#FFE7FFAE" Offset="0.0"/>
+                    <GradientStop Color="#FFEF5350" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Foreground>Black</Button.Foreground>
+            <Button.FontWeight>Bold</Button.FontWeight>
+
+        </Button>
+        <Button x:Name="btn_Search" Content="SEARCH" HorizontalAlignment="Left" Margin="749,739,0,0" VerticalAlignment="Top" Height="55" Width="174" Click="btn_Search_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+           BorderBrush="{TemplateBinding BorderBrush}" 
+           BorderThickness="{TemplateBinding BorderThickness}" 
+           CornerRadius="30">
+
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#FFB7D7F0" Offset="1.0"/>
+                    <GradientStop Color="#FFDBA9F4" Offset="0.0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Foreground>Black</Button.Foreground>
+            <Button.FontWeight>Bold</Button.FontWeight>
+
+        </Button>
+        <DataGrid x:Name="dtgAccount" AutoGenerateColumns="False" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,385,0,0"  
+                  HorizontalAlignment="Center" VerticalAlignment="Top" Height="204" Width="1394" SelectionChanged="dtgJobPosting_SelectionChanged">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                    <Setter Property="FontSize" Value="16" />
+                    <Setter Property="FontWeight" Value="Bold" />
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="300"/>
+                <DataGridTextColumn Header="Password" Binding="{Binding Password}" Width="300"/>
+                <DataGridTextColumn Header="FullName" Binding="{Binding FullName}" Width="*"/>
+                <DataGridTextColumn Header="MemberRole" Binding="{Binding MemberRole}" Width="250"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="txtSeacrhName" HorizontalAlignment="Left" Height="36" Margin="431,650,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287" 
+    FontSize="16" FontFamily="Arial" Padding="5" BorderBrush="#FFB0BEC5" BorderThickness="1" />
+        <Label Content="Search Name" HorizontalAlignment="Left" Margin="261,650,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Arial" Height="36" Width="170" Foreground="Black" FontWeight="Bold"/>
+        <ComboBox x:Name="cbRole" HorizontalAlignment="Left" Margin="922,120,0,0" VerticalAlignment="Top" Width="302" Height="40" FontSize="20" FontWeight="ExtraLight"/>
+        <Label Content="Role" HorizontalAlignment="Left" Margin="799,650,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" Foreground="Black"  FontWeight="Bold"/>
+        <ComboBox x:Name="cbSearchRole" HorizontalAlignment="Left" Margin="871,648,0,0" VerticalAlignment="Top" Width="288" Height="40" FontSize="20" FontWeight="ExtraLight"/>
+
+    </Grid>
+</Window>
